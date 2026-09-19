@@ -2,7 +2,8 @@
 set -euo pipefail
 
 export ANDROID_HOME=/opt/homebrew/share/android-commandlinetools
-export ANDROID_AVD_HOME="/Users/volkerheidema/Projects/wait-a-sec/Untitled/.avd"
+ROOT="$(cd "$(dirname "$0")/../../../.." && pwd)"
+export ANDROID_AVD_HOME="$ROOT/.avd"
 export PATH="$ANDROID_HOME/emulator:$ANDROID_HOME/platform-tools:$PATH"
 
 mkdir -p /tmp
